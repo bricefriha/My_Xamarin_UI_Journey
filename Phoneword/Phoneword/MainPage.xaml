@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Phoneword.MainPage">
+             x:Class="Phoneword.MainPage"
+             xmlns:local="clr-namespace:Phoneword">
     <ContentPage.Content>
         <StackLayout>
             <!-- PhoneWord -->
@@ -12,8 +13,15 @@
             <Entry x:Name="phoneNumberText" Text="1-855-XAMARIN" />
             
             <!-- Controls -->
-            <Button x:Name="translateButton" Text="Translate" />
-            <Button x:Name="callButton" Text="Call" IsEnabled="false"/>
+            <Button x:Name="translateButton" 
+                    Text="Translate"
+                    Clicked="OnTranslate"
+                    BackgroundColor="{x:Static local:SharedResources.ButtonBkColor}"
+                    TextColor="{x:Static local:SharedResources.ButtonTextColor}"/>
+            <Button x:Name="callButton" 
+                    Text="Call"
+                    IsEnabled="false"
+                    Clicked="OnCall"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
