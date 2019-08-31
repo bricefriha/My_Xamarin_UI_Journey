@@ -7,7 +7,13 @@
              x:Class="Phoneword.MainPage">
     <ContentPage.Content>
         <StackLayout>
+            <!-- PhoneWord -->
+            <Label Text="Enter a Phoneword:" FontSize="Large" />
+            <Entry x:Name="phoneNumberText" Text="1-855-XAMARIN" />
             
+            <!-- Controls -->
+            <Button x:Name="translateButton" Text="Translate" />
+            <Button x:Name="callButton" Text="Call" IsEnabled="false"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
